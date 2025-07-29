@@ -1,66 +1,121 @@
 body {
-    font-family: Tahoma, Arial, sans-serif;
-    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background: #18191a;
+    font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
+    color: #e4e6eb;
 }
 .login-container {
-    background: #fff;
-    padding: 32px 24px;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-    width: 340px;
-    transition: box-shadow 0.3s;
+    background: #242526;
+    border: 1px solid #3a3b3c;
+    max-width: 350px;
+    margin: 60px auto 0 auto;
+    padding: 40px 40px 24px 40px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.login-container:hover {
-    box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+.insta-logo {
+    margin-bottom: 32px;
+    margin-top: 10px;
+}
+.insta-logo img {
+    width: 175px;
+    height: auto;
+    display: block;
 }
 .login-container h2 {
-    text-align: center;
-    margin-bottom: 24px;
-    color: #0078d4;
-    letter-spacing: 1px;
+    display: none;
 }
-.login-container input {
+#loginForm {
     width: 100%;
-    padding: 12px;
-    margin: 8px 0 16px 0;
-    border: 1px solid #b0c4de;
-    border-radius: 6px;
-    font-size: 15px;
-    transition: border-color 0.2s;
-    outline: none;
-    background: #f7fafd;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-.login-container input:focus {
-    border-color: #0078d4;
-    background: #eaf6ff;
+#loginForm input {
+    background: #3a3b3c;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: #e4e6eb;
 }
-.login-container button {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(90deg, #0078d4 0%, #00c6fb 100%);
+#loginForm input::placeholder {
+    color: #b0b3b8;
+}
+#loginForm button {
+    background: #0095f6;
     color: #fff;
     border: none;
-    border-radius: 6px;
-    font-size: 17px;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0,120,212,0.10);
-    transition: background 0.2s, transform 0.2s;
+    margin-top: 10px;
+    transition: background 0.2s;
 }
-.login-container button:hover {
-    background: linear-gradient(90deg, #005fa3 0%, #00b2e3 100%);
-    transform: translateY(-2px) scale(1.03);
+#loginForm button:disabled {
+    opacity: 0.5;
+    cursor: default;
 }
-.login-container .error {
-    color: #d8000c;
-    margin-bottom: 12px;
+#loginForm button:hover {
+    background: #1877f2;
+}
+.error {
+    color: #ed4956;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
     text-align: center;
-    min-height: 24px;
-    font-size: 15px;
-    opacity: 0;
-    transition: opacity 0.5s;
+    min-height: 20px;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 18px 0 18px 0;
+}
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: #3a3b3c;
+}
+.divider-text {
+    margin: 0 18px;
+    color: #b0b3b8;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+.signup-link {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 1rem;
+    background: #242526;
+    border: 1px solid #3a3b3c;
+    border-radius: 8px;
+    padding: 18px 0;
+    width: 100%;
+}
+.signup-link a {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: 600;
+}
+.signup-link a:hover {
+    text-decoration: underline;
+}
+.forgot-link {
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
+}
+.forgot-link a {
+    color: #b0b3b8;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+.forgot-link a:hover {
+    text-decoration: underline;
 }
